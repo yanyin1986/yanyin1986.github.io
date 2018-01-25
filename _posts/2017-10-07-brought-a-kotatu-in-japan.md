@@ -1,9 +1,6 @@
 ---
 layout: post
 title: "在日本买了一个暖桌"
-categories: "随笔"
-tags: "生活","日本"
-
 date: 2017-10-07
 ---
 
