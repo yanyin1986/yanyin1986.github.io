@@ -1,8 +1,14 @@
 ---
+title: 图片以及缓存（1）：图片渲染以及字节对齐
+date: 2017-10-15 08:01:00 Z
+categories:
+- CoreAnimation
+- CoreGraphics
+- ImageIO
+- UIKit
+- iOS
+- 图像
 layout: post
-title:  "图片以及缓存（1）：图片渲染以及字节对齐"
-date:   2017-10-15 17:01:00 +0900
-categories: CoreAnimation CoreGraphics ImageIO UIKit iOS 图像
 ---
 
 ## 0x00 界面渲染

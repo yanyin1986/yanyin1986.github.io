@@ -1,7 +1,7 @@
 ---
-layout: post
 title: 关于File sharing
-date: 2019-10-02 19:16 +0900
+date: 2019-10-02 10:16:00 Z
+layout: post
 ---
 
 ## 前言
