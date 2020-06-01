@@ -1,10 +1,11 @@
 ---
+title: iOS应用内多语言切换
+date: 2018-02-09 07:01:00 Z
+categories:
+- Foundation
+- iOS
 layout: post
-title:  "iOS应用内多语言切换"
-date:   2018-02-09 16:01:00 +0900
-categories: Foundation iOS
 ---
-
 
 # 前言
 项目中需要实现一个在应用内切换语言的需求，虽然以前也处理过很多类似的需求，但是我发现以前的方案实际上是绕了一个远路啊，还没有很好的效果！

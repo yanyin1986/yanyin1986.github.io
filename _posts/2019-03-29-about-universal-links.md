@@ -1,7 +1,7 @@
 ---
-layout: post
 title: 关于Universal links
-date: 2019-03-29 10:55 +0900
+date: 2019-03-29 01:55:00 Z
+layout: post
 ---
 
 # Universal Links
