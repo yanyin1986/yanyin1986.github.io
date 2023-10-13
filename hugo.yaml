@@ -12,9 +12,9 @@ minify:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: ExampleSite
-  description: "ExampleSite description"
-  keywords: [Blog, Portfolio, PaperMod]
+  title: '歪歪的博客'
+  description: '一些编程的思考，生活的记录'
+  keywords: [Blog, iOS, Life]
   author: Leon.yan
 
   ShowReadingTime: true
@@ -33,10 +33,14 @@ params:
   showtoc: false
   tocopen: false
 
-  socialIcons:
-    - name: twitter
-      url: "https://twitter.com/"
-    - name: stackoverflow
-      url: "https://stackoverflow.com"
-    - name: github
-      url: "https://github.com/"
+  profileMode:
+    enabled: true
+    title: '^-^'
+    subtitle: '一些编程的思考，生活的记录'
+    buttons:
+      - name: Github
+        url: "https://github.com/yanyin1986"
+      - name: Posts 
+        url: "posts/"
+      - name: RSS
+        url: "index.xml"
