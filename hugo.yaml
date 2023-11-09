@@ -34,7 +34,7 @@ params:
   tocopen: false
 
   profileMode:
-    enabled: true
+    enabled: false
     title: '^-^'
     subtitle: '一些编程的思考，生活的记录'
     buttons:
