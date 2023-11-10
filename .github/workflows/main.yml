@@ -33,6 +33,8 @@ jobs:
       - name: Add new article 
         run: |
           git status
+          git config --global user.email "yanyin1986@gmail.com"
+          git config --global user.name "Leon.yan"
           git add . 
           git commit -m "Add new article"
           git push
