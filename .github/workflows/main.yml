@@ -17,6 +17,7 @@ jobs:
     if:  ${{ inputs.article_title }} 
     env:
       HUGO_VERSION: 0.114.0
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Install Hugo CLI
         run: |
