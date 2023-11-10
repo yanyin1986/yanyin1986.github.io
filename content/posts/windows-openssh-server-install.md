@@ -10,3 +10,6 @@ draft = true
 # 安装 OpenSSH
 Windows11 提供了可选的 OpenSSH 组件，所以安装的话就很容易。
 打开 设置->应用->可选功能.
+
+<img width="905" alt="image" src="https://github.com/yanyin1986/yanyin1986.github.io/assets/1109143/c6696cfe-f5e6-4e45-bbfb-322b4dde2a36">
+
