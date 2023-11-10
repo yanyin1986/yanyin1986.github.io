@@ -2,7 +2,11 @@ name: Hugo command
 
 on:
   workflow_dispatch:
-
+    inputs:
+      article_title:
+        description: 'article title'
+        required: true
+        type: string
 defaults:
   run:
     shell: bash
@@ -10,6 +14,7 @@ defaults:
 jobs:
   build:
     runs-on: ubuntu-latest
+    if:  ${{ inputs.article_title }} 
     env:
       HUGO_VERSION: 0.114.0
     steps:
@@ -23,5 +28,8 @@ jobs:
           submodules: recursive
       - name: Script
         run: |
-          hugo help
+          hugo new posts/${{ inputs.article_title }}.md
+      - name: Script2
+        run: |
+          git status
 
