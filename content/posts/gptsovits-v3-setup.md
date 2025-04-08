@@ -6,7 +6,7 @@ title = '在Linux服务器上安装 GPT-SoVITS V3'
 
 # 安装步骤
 
-## 1. 安装 conda
+## 安装 conda
 
 ```bash
 curl -O https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-x86_64.sh
@@ -15,14 +15,14 @@ bash ~/Anaconda3-2024.10-1-Linux-x86_64.sh
 
 安装完了之后，会提示 restart shell，如果是 linux 服务器，则可以 exit 然后重新连接。
 
-## 2. 创建 conda 环境
+## 创建 conda 环境
 
 ```bash
 conda create -n GPTSoVits python=3.9
 conda activate GPTSoVits
 ```
 
-## 3. 克隆 GPT-SOVITS 项目并且进行初步安装
+## 克隆 GPT-SOVITS 项目并且进行初步安装
 
 ```bash
 git clone https://github.com/RVC-Boss/GPT-SoVITS.git
@@ -30,13 +30,13 @@ cd GPT-SoVITS
 bash install.sh
 ```
 
-## 4. 查漏补缺
+## 查漏补缺
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## 5. 安装 git-lfs
+## 安装 git-lfs
 
 ```bash
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
@@ -44,7 +44,7 @@ sudo apt-get update
 sudo apt-get install git-lfs
 ```
 
-## 6. 下载 pretrained 模型
+## 下载 pretrained 模型
 
 按照官方的文档介绍，需要将 pretrained 模型下载到 `{project_root}/GPT_SoVITS/pretrained_models` 下面。
 但是，`{project_root}/GPT_SoVITS/pretrained_models` 已经存在在 git 的 index 里面了，所以这边用了笨办法。
@@ -56,7 +56,7 @@ mv models/* GPT-SoVITS/GPT_SoVITS/pretrained_models/
 rm -rf models
 ```
 
-## 7. 启动 webui
+## 启动 webui
 
 ```bash
 python webui.py
@@ -64,7 +64,7 @@ python webui.py
 
 第一次启动的时候会自动下载 g2pW 相关的模型配置，下载完成之后会自动启动 webui。
 
-## 8. [Optional] 安装 jupyterlab
+## [Optional] 安装 jupyterlab
 
 为了操作更加简便，安装 jupyterlab。
 
@@ -89,7 +89,7 @@ jupyter notebook --generate-config
 jupyter lab --port=8888
 ```
 
-## 9. [Optional] Linux 自动启动 webui 和 jupyterlab
+## [Optional] Linux 自动启动 webui 和 jupyterlab
 
 因为这个环境是放在服务器上，所以需要设置自动启动。
 可以用 systemd 来设置。
