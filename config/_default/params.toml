@@ -1,0 +1,38 @@
+defaultTheme = "auto"
+fingerprint = "md5"
+dateFormat = "2006-01-02"
+enablePWA = false
+
+[author]
+  name = "yanyin1986"
+  email = "yanyin1986@gmail.com"
+  link = "https://github.com/yanyin1986"
+
+[image]
+  # 缓存图片链接到本地
+  cacheRemote = true
+  # 图片缩放和优化
+  optimise = true
+
+[section]
+  # section 页面每页显示文章数量
+  paginate = 20
+  # 日期格式 (月和日)
+  dateFormat = "01-02"
+  # RSS 文章数目
+  rss = 10
+  # 最近更新文章设置
+  [section.recentlyUpdated]
+    enable = true
+    rss = true
+    days = 30
+    maxCount = 10
+
+# List (目录或标签) 页面配置
+[list]
+  # list 页面每页显示文章数量
+  paginate = 20
+  # 日期格式 (月和日)
+  dateFormat = "01-02"
+  # RSS 文章数目
+  rss = 10

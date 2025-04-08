@@ -1,0 +1,10 @@
+baseURL = 'https://yanyin1986.github.io/'
+defaultContentLanguage = 'zh-cn'
+
+enableRobotsTXT = true
+enableGitInfo = true
+enableEmoji = true
+
+theme = "DoIt"
+hasCJKLanguage = true
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
