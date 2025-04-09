@@ -204,7 +204,7 @@ enablePWA = false
 [page.comment]
   enable = true
   # DoIt 新增 | 0.2.5 Utterances 评论系统设置
-  [params.page.comment.utterances]
+  [page.comment.utterances]
     enable = true
     # owner/repo
     repo = "yanyin1986/yanyin1986.github.io"
