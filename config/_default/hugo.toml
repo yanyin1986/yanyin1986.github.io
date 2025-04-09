@@ -8,3 +8,38 @@ enableEmoji = true
 theme = "DoIt"
 hasCJKLanguage = true
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
+
+# 主页配置
+[params.home]
+  rss = 10
+  # 主页个人信息
+  [params.home.profile]
+    enable = true
+    # Gravatar 邮箱, 用于优先在主页显示的头像
+    gravatarEmail = ""
+    # 主页显示头像的 URL
+    # 将你的头像文件放置于 static 或者 assets 目录下
+    # 文件路径是相对于 static 或者 assets 目录的
+    avatarURL = "/images/avatar.jpeg"
+    # 头像的链接指向的 URL
+    avatarLinkURL = "https://github.com/yanyin1986"
+    # 主页显示的网站标题 (支持 HTML 格式)
+    title = "YY Log"
+    # 是否显示社交账号
+    social = true
+    disclaimer = ""
+  # 主页文章列表
+  [params.home.posts]
+    enable = true
+    # 主页每页显示文章数量
+    paginate = 6
+    # 当你没有在文章前置参数中设置 "hiddenFromHomePage" 时的默认行为
+    defaultHiddenFromHomePage = false
+
+# 作者的社交信息设置
+[params.social]
+  GitHub = "yanyin1986"
+  Twitter = "yanyin1986"
+  BuyMeACoffee = "yanyin1986"
+  QQ = "75573119"
+  Email = "yanyin1986@gmail.com"

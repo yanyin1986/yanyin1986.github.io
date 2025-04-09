@@ -3,6 +3,15 @@ fingerprint = "md5"
 dateFormat = "2006-01-02"
 enablePWA = false
 
+[app]
+  noFavicon = false
+  # 更现代的 SVG 网站图标, 可替代旧的 .png 和 .ico 文件
+  svgFavicon = ""
+  # Safari 图标颜色
+  iconColor = "#5bbad5"
+  # Windows v8-10磁贴颜色
+  tileColor = "#da532c"
+
 [author]
   name = "yanyin1986"
   email = "yanyin1986@gmail.com"
@@ -86,11 +95,11 @@ enablePWA = false
     # 默认展开显示的代码行数
     maxShownLines = 10
     # 是否显示代码行号
-    lineNos = true
+    lineNos = false
     # 是否开启代码换行
     wrap = false
     # 是否显示代码块标题
-    header = true
+    header = false
   # 表格配置
   [page.table]
     # 是否开启表格排序
@@ -98,13 +107,7 @@ enablePWA = false
   [page.header]
     # 是否开启标题自动编号
     [page.header.number]
-      enable = true
-      [page.header.number.format]
-        h2 = "{h2} {title}"
-        h3 = "{h2}.{h3} {title}"
-        h4 = "{h2}.{h3}.{h4} {title}"
-        h5 = "{h2}.{h3}.{h4}.{h5} {title}"
-        h6 = "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
+      enable = false
   # KaTeX 数学公式配置 (KaTeX https://katex.org/)
   [page.math]
     enable = false
@@ -123,41 +126,8 @@ enablePWA = false
   # 文章页面的分享信息设置
   [page.share]
     enable = true
-    Baidu = false
-    Blogger = false
-    Buffer = false
-    Digg = false
-    Evernote = false
-    Facebook = false
-    Flipboard = false
-    HackerNews = true
-    Instapaper = false
-    Line = false
-    Linkedin = false
-    Mix = false
-    Myspace = false
-    Odnoklassniki = false
-    Pinterest = false
-    Pocket = false
-    Reddit = false
-    Renren = false
-    Skype = false
-    Stumbleupon = false
     Telegram = true
-    Trello = false
-    Tumblr = false
     Twitter = true
-    VK = false
-    Weibo = true
-    # Weixin API example: "https://tenapi.cn/qr/?txt="
-    # https://docs.tenapi.cn/qrcode.html
-    # https://www.free-api.com/doc/531
-    # http://www.alapi.cn/api/view/72
-    # OR self-hosted: https://github.com/yhf7952/QrCodeApi
-    Weixin = ""
-    Whatsapp = false
-    Xing = false
-    Mastodon = true
   # 第三方库配置
   [page.library]
     [page.library.css]
@@ -195,3 +165,9 @@ enablePWA = false
   [page.related]
     enable = true
     count = 5
+
+[sponsor]
+    enable = true
+    bio = "如果你觉得这篇文章对你有所帮助，buymeacoffee~"
+    link = "https://www.buymeacoffee.com/yanyin1986" # 你的赞赏页面的地址
+    custom = "" # 自定义 HTML
