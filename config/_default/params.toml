@@ -207,7 +207,7 @@ enablePWA = false
   [params.page.comment.utterances]
     enable = true
     # owner/repo
-    repo = ""
+    repo = "yanyin1986/yanyin1986.github.io"
     issueTerm = "pathname"
     label = ""
     lightTheme = "github-light"
