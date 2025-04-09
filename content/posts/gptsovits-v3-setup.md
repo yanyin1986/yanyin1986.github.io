@@ -58,6 +58,8 @@ mv models/* GPT-SoVITS/GPT_SoVITS/pretrained_models/
 rm -rf models
 ```
 
+---
+
 # 启动
 
 ## 启动 webui
@@ -93,11 +95,101 @@ jupyter notebook --generate-config
 jupyter lab --port=8888
 ```
 
-## [Optional] Linux 自动启动 webui 和 jupyterlab
+# [Optional] Linux 自动启动 webui 和 jupyterlab
 
 因为这个环境是放在服务器上，所以需要设置自动启动。
 可以用 systemd 来设置。
 
-```bash
+> [!IMPORTANT]
+> 因为整个环境是构筑在 conda 之上的，所以需要在使用 conda 启用特定环境的情况下，才能启动 webui。
 
+## webui
+
+### 创建 systemd 启动脚本
+
+```bash
+vim on_start.sh
+
+#!/bin/bash
+source /home/ubuntu/anaconda3/etc/profile.d/conda.sh
+conda activate GPTSoVits
+python -u /home/ubuntu/GPT-SoVITS/webui.py
+```
+
+### 添加可执行权限
+
+```bash
+sudo chmod +x on_start.sh
+```
+
+### 创建 systemd 的服务文件
+
+```bash
+sudo vim /etc/systemd/system/webui.service
+```
+
+> [!IMPORTANT]
+> systemd 的配置文件必须包含 Unit 的配置，但是因为 code block 插件问题，这边没有写。
+> 需要自己补上 Unit 的部分。
+> 例如:
+>
+> [Unit]
+>
+> Description = GPT-SoVITS webui
+
+```ini
+[Service]
+Type=simple
+ExecStart=/home/ubuntu/GPT-SoVITS/on_start.sh
+User=ubuntu
+Group=adm
+WorkingDirectory=/home/ubuntu/GPT-SoVITS
+Restart=always
+
+[Install]
+WantedBy = multi-user.target
+```
+
+### 启动服务
+
+```bash
+sudo systemctl daemon-reload   # 重新加载配置文件
+sudo systemctl enable webui   # 开机自启
+sudo systemctl start webui
+```
+
+## jupyter
+
+### 创建 systemd 启动脚本
+
+```bash
+sudo vim /etc/systemd/system/jupyterlab.service
+```
+
+> [!IMPORTANT]
+> 需要补充 Unit 的部分。
+>
+> [Unit]
+>
+> Description = JupyterLab
+
+```bash
+[Service]
+Type=simple
+ExecStart=/home/ubuntu/anaconda3/envs/GPTSoVits/bin/jupyter lab --port 8888
+User=ubuntu
+Group=adm
+WorkingDirectory=/home/ubuntu/GPT-SoVITS
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+```
+
+### 启动服务
+
+```bash
+sudo systemctl daemon-reload   # 重新加载配置文件
+sudo systemctl enable jupyterlab   # 开机自启
+sudo systemctl start jupyterlab
 ```
