@@ -43,3 +43,6 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
   BuyMeACoffee = "yanyin1986"
   QQ = "75573119"
   Email = "yanyin1986@gmail.com"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

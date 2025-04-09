@@ -12,6 +12,34 @@ enablePWA = false
   # Windows v8-10磁贴颜色
   tileColor = "#da532c"
 
+[search]
+  enable = true
+  # 搜索引擎的类型 ("algolia", "fuse")
+  type = "fuse"
+  # 文章内容最长索引长度
+  contentLength = 4000
+  # 搜索框的占位提示语
+  placeholder = ""
+  # DoIt 新增 | 0.2.1 最大结果数目
+  maxResultLength = 10
+  # DoIt 新增 | 0.2.3 结果内容片段长度
+  snippetLength = 50
+  # DoIt 新增 | 0.2.1 搜索结果中高亮部分的 HTML 标签
+  highlightTag = "em"
+  # DoIt 新增 | 0.2.4 是否在搜索索引中使用基于 baseURL 的绝对路径
+  absoluteURL = false
+  [search.fuse]
+    # DoIt 新增 | 0.2.12 https://fusejs.io/api/options.html
+    isCaseSensitive = false
+    minMatchCharLength = 2
+    findAllMatches = false
+    location = 0
+    threshold = 0.3
+    distance = 100
+    ignoreLocation = false
+    useExtendedSearch = false
+    ignoreFieldNorm = false
+
 [author]
   name = "yanyin1986"
   email = "yanyin1986@gmail.com"
@@ -167,7 +195,20 @@ enablePWA = false
     count = 5
 
 [sponsor]
+  enable = true
+  bio = "如果你觉得这篇文章对你有所帮助，buymeacoffee~"
+  link = "https://www.buymeacoffee.com/yanyin1986" # 你的赞赏页面的地址
+  custom = "" # 自定义 HTML
+
+# DoIt 更改 | 0.2.0 评论系统设置
+[page.comment]
+  enable = true
+  # DoIt 新增 | 0.2.5 Utterances 评论系统设置
+  [params.page.comment.utterances]
     enable = true
-    bio = "如果你觉得这篇文章对你有所帮助，buymeacoffee~"
-    link = "https://www.buymeacoffee.com/yanyin1986" # 你的赞赏页面的地址
-    custom = "" # 自定义 HTML
+    # owner/repo
+    repo = ""
+    issueTerm = "pathname"
+    label = ""
+    lightTheme = "github-light"
+    darkTheme = "github-dark"
