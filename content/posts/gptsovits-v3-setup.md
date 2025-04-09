@@ -2,6 +2,8 @@
 date = '2025-04-08T22:08:22+09:00'
 draft = false
 title = '在Linux服务器上安装 GPT-SoVITS V3'
+tags = ['GPT-SoVITS', 'VITS', 'AI', 'Voice Conversion']
+summary = '在Linux服务器上安装 GPT-SoVITS V3'
 +++
 
 # 安装步骤
