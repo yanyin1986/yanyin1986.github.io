@@ -1,5 +1,38 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://yanyin1986.github.io</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://yanyin1986.github.io</link></image><lastBuildDate>Thu, 26 Jun 2025 23:51:11 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>在Linux服务器上安装 GPT-SoVITS V3</title><link>https://yanyin1986.github.io/post/zai-Linux-fu-wu-qi-shang-an-zhuang-%20GPT-SoVITS%20V3.html</link><description># 安装步骤
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://yanyin1986.github.io</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://yanyin1986.github.io</link></image><lastBuildDate>Thu, 26 Jun 2025 23:55:03 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>iOS App备案，获取证书公钥</title><link>https://yanyin1986.github.io/post/iOS%20App-bei-an-%EF%BC%8C-huo-qu-zheng-shu-gong-yao.html</link><description>1. 创建新的 distribution 证书
+2. 在本地的 keychain 里面导出证书为 `Certificates.p12`
+3. 输入下面的命令，提取证书，注意如果 openssl 3
+
+```shell
+## openssl version &lt; 3
+openssl pkcs12 \
+  -in Certificates.p12 \
+  -clcerts \
+  -nokeys \
+  -out MyCertificate.crt
+
+## openssl version &gt; 3
+openssl pkcs12 \
+  -legacy \
+  -in Certificates.p12 \
+  -clcerts \
+  -nokeys \
+  -out MyCertificate.crt
+```
+
+4. 获取指纹信息
+```shell
+## MD5 
+openssl x509 -noout -fingerprint -md5 -inform pem -in MyCertificate.crt
+
+## SHA1
+openssl x509 -noout -fingerprint -sha1 -inform pem -in MyCertificate.crt
+```
+
+5. 获取公钥
+```shell
+openssl x509 -pubkey -noout -inform pem -in MyCertificate.crt &gt; PublicKey.pem
+```。</description><guid isPermaLink="true">https://yanyin1986.github.io/post/iOS%20App-bei-an-%EF%BC%8C-huo-qu-zheng-shu-gong-yao.html</guid><pubDate>Thu, 26 Jun 2025 23:54:33 +0000</pubDate></item><item><title>在Linux服务器上安装 GPT-SoVITS V3</title><link>https://yanyin1986.github.io/post/zai-Linux-fu-wu-qi-shang-an-zhuang-%20GPT-SoVITS%20V3.html</link><description># 安装步骤
 
 ## 安装 conda
 
