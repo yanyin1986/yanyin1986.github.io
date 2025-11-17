@@ -1,3 +1,4 @@
+
 1. 创建新的 distribution 证书
 2. 在本地的 keychain 里面导出证书为 `Certificates.p12`
 3. 输入下面的命令，提取证书，注意如果 openssl 3
